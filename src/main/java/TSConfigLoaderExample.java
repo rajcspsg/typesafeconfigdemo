@@ -6,7 +6,6 @@ import java.nio.file.Paths;
 public class TSConfigLoaderExample {
 
     public static void main(String[] args) throws Exception {
-        File f = new File("./src/main");
         System.setProperty("actor_name", "MyActor");
         Config defaultsConfig = ConfigFactory.load("test/defaults.conf");
         System.out.println(defaultsConfig);
