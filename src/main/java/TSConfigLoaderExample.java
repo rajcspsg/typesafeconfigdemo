@@ -8,8 +8,8 @@ public class TSConfigLoaderExample {
     public static void main(String[] args) throws Exception {
         File f = new File("./src/main");
         System.setProperty("actor_name", "MyActor");
-        System.setProperty("conf.name", "MyActor");
-        System.setProperty("conf.title", "MyTitle");
+        Config defaultsConfig = ConfigFactory.load("test/defaults.conf");
+        System.out.println(defaultsConfig);
         Config defaultConfig = ConfigFactory.parseResources("test/defaults.conf").resolve();
         System.out.println(defaultConfig);
 
